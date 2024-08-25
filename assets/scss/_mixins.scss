@@ -1,0 +1,103 @@
+
+@font-face {
+  font-family: "TTTravels";
+  src: local("TTTravels-Regular"),
+    url("~assets/fonts/TTTravels/TTTravels-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TTTravels";
+  src: local("TTTravels-Medium"),
+    url("~assets/fonts/TTTravels/TTTravels-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+
+
+
+@mixin title1{
+  font-family: 'TTTravels';
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+}
+@mixin title2{
+  font-family: 'TTTravels';
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+@mixin subtitle{
+  font-family: 'TTTravels';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@mixin text{
+  font-family: 'TTTravels';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @media (width <= 480px){
+    font-size: 16px;
+  }
+}
+@mixin textSmall{
+  font-family: 'TTTravels';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+@mixin textSmall2{
+  font-family: 'TTTravels';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+@mixin link{
+  font-family: 'TTTravels';
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@mixin navLink{
+  font-family: 'TTTravels';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  @media (width <= 1300px){
+    font-size: 14px;
+  }
+}
+
+
+@mixin hoverLinkMixin($color: $black, $hoverColor: $light-purple){
+  transition: .3s;
+  color: $color;
+  @media (hover: hover){
+    &:hover{
+      cursor: pointer;
+      transition: .3s;
+      color: $hoverColor;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

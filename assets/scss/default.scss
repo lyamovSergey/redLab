@@ -1,0 +1,30 @@
+
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: $white;
+}
+*{
+  @include text;
+  box-sizing: border-box;
+  color: $black;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: $light-purple;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 9px;
+    background-color: #441bd3;
+  }
+}
+.container{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+
