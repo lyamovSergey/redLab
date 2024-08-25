@@ -43,7 +43,6 @@ export default {
 .header{
 	position: sticky;
   top: 0;
-	// transition: .3s;
 	z-index: 10;
 	&.shadow{
 		background: $white;

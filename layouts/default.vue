@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheHeader :class="{shadow: shadow}"/>
-      <nuxt />
+    <nuxt />
     <SvgSprite/>
   </div>
   
