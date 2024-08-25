@@ -70,4 +70,4 @@ More information about the usage of this directory in [the documentation](https:
 
 ## NODE
 
-### `16.13.0`
+### `20.14.0`
