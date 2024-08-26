@@ -10,13 +10,13 @@
 			</div>
 		</section>
 		<section class="card-section section">
-			<uiCard
-				v-for="i in 4"
-				:key="i"
-				:content="$t(`cards.card${i}`)"
-				:imgPath="`card${i}`"
-				:imgName="'image'"
-			/>
+			<div v-for="i in 4" :key="i" class="anim-card">
+				<uiCard
+					:content="$t(`cards.card${i}`)"
+					:imgPath="`card${i}`"
+					:imgName="'image'"
+				/>
+			</div>
 		</section>
 		<Rooms />
 		<TheFeedbackButton />
@@ -29,33 +29,27 @@ export default {
 	methods: {
     scrollAnimation(){
       const gsap = this.$gsap;
-			let cards = document.querySelectorAll('.card');
-      
-      gsap.fromTo(cards, 
-        {
-          y: 100,
-          opacity: 0
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.5,
-          stagger: 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: cards[0],
-            start: "top 90%",
-            toggleActions: "play pause resume reverse",
-            markers: false,
-          }
-        }
-      );
+			let cards = document.querySelectorAll('.anim-card');
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: '.card-section',
+					start: "top 90%",
+					toggleActions: "play pause resume reverse",
+					markers: false,
+				}
+			});
+			cards.forEach((card, index) => {
+				tl.fromTo(card, 
+					{ y: 100, opacity: 0 },
+					{ opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+					index * 0.2
+				);
+			});
     }
 	},
   async mounted(){
     await this.$nextTick()
     this.scrollAnimation()
-		console.log('1::: ', 1);
   }
 };
 </script>
