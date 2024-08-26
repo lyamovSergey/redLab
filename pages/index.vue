@@ -29,7 +29,8 @@ export default {
 	methods: {
     scrollAnimation(){
       const gsap = this.$gsap;
-      let cards = document.querySelectorAll('.card');
+			let cards = document.querySelectorAll('.card');
+      
       gsap.fromTo(cards, 
         {
           y: 100,
@@ -43,9 +44,9 @@ export default {
           ease: "power2.out",
           scrollTrigger: {
             trigger: cards[0],
-            start: "top bottom",
-            toggleActions: "play pause resume reset",
-            markers: false,
+            start: "top 90%",
+            toggleActions: "play pause resume reverse",
+            markers: true,
           }
         }
       );
