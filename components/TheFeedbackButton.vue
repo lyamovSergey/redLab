@@ -15,9 +15,9 @@
         let moveY = (y / rect.height) - 0.5;
 
         gsap.to('.float-btn', {
-          x: moveX * 10,
-          y: moveY * 10,
-          duration: 0.2,
+          x: moveX * 100,
+          y: moveY * 100,
+          duration: 0.1,
           ease: "power1.out"
         });
       },
@@ -88,8 +88,8 @@
   &:hover{
     transition: .3s;
     bottom: 10px !important;
-    width: 195px !important;
-    height: 195px !important;
+    width: 225px !important;
+    height: 225px !important;
   }
 }
 
