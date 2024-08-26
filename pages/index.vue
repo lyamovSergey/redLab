@@ -46,7 +46,7 @@ export default {
             trigger: cards[0],
             start: "top 90%",
             toggleActions: "play pause resume reverse",
-            markers: true,
+            markers: false,
           }
         }
       );
@@ -55,6 +55,7 @@ export default {
   async mounted(){
     await this.$nextTick()
     this.scrollAnimation()
+		console.log('1::: ', 1);
   }
 };
 </script>
